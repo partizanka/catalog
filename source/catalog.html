@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ВКедах: Каталог</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="container">
+      <section class="main-header__top">
+        <div class="main-header__item logo">
+          <h1 class="logo__link">ВКедах</h1>
+        </div>
+        <b class="main-header__title">Кеды на все случаи жизни</b>
+        <div class="main-header__item cart">
+          <a class="cart__link" href="#">Корзина</a>
+        </div>
+      </section>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Каталог</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">О компании</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">FAQ</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Блог</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-header__item search">
+        <input class="search__input" type="search" placeholder="Поиск"></input>
+      </div>
+    </div>
+  </header>
+  <main class="main-page">
+    <div class="container">
+      <div class="filter">
+        <form class="filter__form" action="POST">
+          <fieldset class="filter__cost">
+            <legend class="filter__title">Стоимость:</legend>
+            <div class="filter__range">
+              <div class="filter__scale">
+                <div class="filter__bar"></div>
+              </div>
+              <div class="filter__toggle filter__toggle--min"></div>
+              <div class="filter__toggle filter__toggle---max"></div>
+            </div>
+            <div class="filter__range">
+              <div class="filter__range-wrap">
+                <label class="filter__range-label" for="from">от</label>
+                <input class="filter__range-input" type="text" name="cost-from" value="0" id="from">
+              </div>
+              <div class="filter__range-wrap">
+                <label class="filter__range-label" for="to">до</label>
+                <input class="filter__range-input" type="text" name="cost-to" value="15 000" id="to">
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="filter__gender">
+            <legend class="filter__title">Пол:</legend>
+            <div class="filter__item">
+              <input class="filter__input" type="radio" name="gender" id="male" checked>
+              <label class="filter__label filter__label--male" for="male">Мужской</label>
+            </div>
+            <div class="filter__item">
+              <input class="filter__input" type="radio" name="gender" id="female">
+              <label class="filter__label filter__label--female" for="female">Женский</label>
+            </div>
+          </fieldset>
+          <fieldset class="filter__brand">
+            <legend class="filter__title">Бренд:</legend>
+            <div class="filter__item">
+              <input class="filter__input" type="checkbox" name="converse" id="converse" checked>
+              <label class="filter__label filter__label--brand" for="converse">Converse</label>
+            </div>
+            <div class="filter__item">
+              <input class="filter__input" type="checkbox" name="puma" id="puma">
+              <label class="filter__label filter__label--brand" for="puma">Puma</label>
+            </div>
+            <div class="filter__item">
+              <input class="filter__input" type="checkbox" name="nike" id="nike" checked>
+              <label class="filter__label filter__label--brand" for="nike">Nike</label>
+            </div>
+            <div class="filter__item">
+              <input class="filter__input" type="checkbox" name="adidas" id="adidas">
+              <label class="filter__label filter__label--brand" for="adidas">Adidas</label>
+            </div>
+            <div class="filter__item">
+              <input class="filter__input" type="checkbox" name="reebok" id="reebok">
+              <label class="filter__label filter__label--brand" for="reebok">Reebok</label>
+            </div>
+            <input class="filter__btn" type="submit" value="Показать">
+          </fieldset>
+        </form>
+      </div>
+      <section class="catalog">
+        <section class="catalog-sort">
+          <span class="catalog-sort__title">Сортировать:</span>
+          <div class="catalog-sort__control">
+            <ul class="catalog-sort__list">
+              <li class="catalog-sort__item">
+                <a class="catalog-sort__link active">По цене</a>
+              </li>
+              <li class="catalog-sort__item">
+                <a class="catalog-sort__link" href="#">По типу</a>
+              </li>
+              <li class="catalog-sort__item">
+                <a class="catalog-sort__link" href="#">По названию</a>
+              </li>
+            </ul>
+            <div class="catalog-sort__control">
+              <a class="catalog-sort__link catalog-sort__link--down active"></a>
+              <a class="catalog-sort__link catalog-sort__link--up" href="#"></a>
+            </div>
+          </div>
+        </section>
+        <section class="catalog-list">
+          <article class="catalog-item catalog-item--adidas">
+            <img class="catalog-item__image" src="img/img-sedona.jpg" width="360" height="576" alt="Adidas">
+            <div class="catalog-item__description">
+              <b class="catalog-item__title" href="#">Adidas</b>
+              <a class="catalog-item__link" href="#">100 руб.</a>
+            </div>
+          </article>
+          <article class="catalog-item catalog-item--adidas">
+            <img class="catalog-item__image" src="img/img-sedona.jpg" width="360" height="576" alt="Adidas">
+            <div class="catalog-item__description">
+              <b class="catalog-item__title" href="#">Adidas</b>
+              <a class="catalog-item__link" href="#">100 руб.</a>
+            </div>
+          </article>
+          <article class="catalog-item catalog-item--adidas">
+            <img class="catalog-item__image" src="img/img-sedona.jpg" width="360" height="576" alt="Adidas">
+            <div class="catalog-item__description">
+              <b class="catalog-item__title" href="#">Adidas</b>
+              <a class="catalog-item__link" href="#">100 руб.</a>
+            </div>
+          </article>
+          <article class="catalog-item catalog-item--adidas">
+            <img class="catalog-item__image" src="img/img-sedona.jpg" width="360" height="576" alt="Adidas">
+            <div class="catalog-item__description">
+              <b class="catalog-item__title" href="#">Adidas</b>
+              <a class="catalog-item__link" href="#">100 руб.</a>
+            </div>
+          </article>
+          <article class="catalog-item catalog-item--adidas">
+            <img class="catalog-item__image" src="img/img-sedona.jpg" width="360" height="576" alt="Adidas">
+            <div class="catalog-item__description">
+              <b class="catalog-item__title" href="#">Adidas</b>
+              <a class="catalog-item__link" href="#">100 руб.</a>
+            </div>
+          </article>
+          <article class="catalog-item catalog-item--adidas">
+            <img class="catalog-item__image" src="img/img-sedona.jpg" width="360" height="576" alt="Adidas">
+            <div class="catalog-item__description">
+              <b class="catalog-item__title" href="#">Adidas</b>
+              <a class="catalog-item__link" href="#">100 руб.</a>
+            </div>
+          </article>
+        </section>
+        <ul class="pagination">
+          <li class="pagination__item">
+            <a class="pagination__link active">1</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">2</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">3</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link pagination__link--next" href="#">Следующая</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="main-footer">
+    <div class="container">
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#" target="_blank"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#" target="_blank"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#" target="_blank"></a>
+        </li>
+      </ul>
+      <div class="social-list__text">
+        <b>Давайте дружить, это выгодно!</b>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
